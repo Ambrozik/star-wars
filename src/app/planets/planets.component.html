@@ -1,0 +1,12 @@
+<div class="main-div">
+  <mat-card class="card">
+    <mat-list>
+      <mat-list-item  *ngFor="let planet of planets" class="mat-whiteframe-2dp mat-card">
+        <img mat-list-avatar src="{{ planet.photo }}">
+        <h3 matLine> {{planet.planetName}} {{planet.Gouvernment}}</h3>
+      </mat-list-item>
+    </mat-list>
+
+  </mat-card>
+</div>
+

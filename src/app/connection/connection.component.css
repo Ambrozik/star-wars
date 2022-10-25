@@ -1,0 +1,18 @@
+.card {
+}
+.test{
+  color: white ;
+}
+
+.main-div{
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  max-width: 80%;
+  float: left;
+  box-shadow: 5px 5px 18px 5px #000000;
+}

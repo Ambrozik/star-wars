@@ -1,0 +1,33 @@
+<span class="container">
+  <mat-toolbar color="primary" >
+    <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+     <button mat-button [routerLink]="['/home']"><h1>Les astres dans star wars </h1></button>
+
+
+    <div class="help">
+      <span >
+          <button mat-button routerLink="/inscription" ><h1>S'inscrire</h1></button>
+          <button mat-icon-button><mat-icon>help</mat-icon></button>
+      </span>
+    </div>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav mode="push" #snav >
+      <mat-nav-list>
+        <a mat-list-item routerLink="/test" >Mon Compte</a>
+        <a mat-list-item routerLink="/planets" >Liste des astres dans star wars</a>
+        <a mat-list-item routerLink="/myplanets" >Mes planètes</a>
+         <button mat-flat-button color="primary"  *ngIf=" view === 'Connected'"  class="inner-content"  [routerLink]="['']" (click)="logout()" > Se Deconnecter </button>
+         <button mat-flat-button color="primary"  *ngIf=" view === 'DisConnected'"  class="inner-content"  [routerLink]="['/connection']" > Se connecter </button>
+      </mat-nav-list>
+
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+     <div class="backgroundImage">
+            <router-outlet></router-outlet>
+     </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</span>
